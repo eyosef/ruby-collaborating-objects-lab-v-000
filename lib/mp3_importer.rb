@@ -1,26 +1,18 @@
-class MP3Importer
+require 'pry'
 
-  attr_accessor :path, :filenames
+class MP3Importer
+  attr_accessor :path
 
   def initialize(path)
-    @path=path
-    @filesnames = files #instance method
-    #Dir["./spec/fixtures/mp3s"]
+    @path = path
   end
 
-  #MP3Importer.new('./db/mp3s').import
-  # "/home/eyosef/ruby-collaborating-objects-lab-v-000" (directory file this is currently in)
   def files
-    current_dir = Dir.getwd #name of current directory
-    Dir.chdir(@path) #change directory to instance of path
-    filenames = Dir.glob("*.mp3") #setting variable equal to mp3s in @path
-    Dir.chdir(current_dir) #moving back to current directory
-    filenames #runs mp3s
+    Dir.glob("#{path}/*").collect{ |f| f.gsub("#{path}/", "") }
   end
 
   def import
-    @filesnames.each { |filename| Song.new_by_filename(filename)}
+    files.each{ |filename| Song.new_by_filename(filename)}
+    binding.pry
   end
-
-
 end
