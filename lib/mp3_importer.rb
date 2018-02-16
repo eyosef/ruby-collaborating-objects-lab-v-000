@@ -16,7 +16,7 @@ class MP3Importer
     Dir.chdir(@path) #change directory to instance of path
     filenames = Dir.glob("*.mp3") #setting variable equal to mp3s in @path
     Dir.chdir(current_dir) #moving back to current directory
-    @filenames << filenames #runs mp3s
+    filenames #runs mp3s
   end
 
   def import
