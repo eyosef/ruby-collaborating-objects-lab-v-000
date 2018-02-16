@@ -11,7 +11,6 @@ class Artist
     @artist=Artist
     @songs = []
     @all = []
-    # @all=all
 
   end
 
