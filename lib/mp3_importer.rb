@@ -4,6 +4,7 @@ class MP3Importer
 
   def initialize(path)
     @path=path
+    @filesnames = []
     MP3Importer.new('./db/mp3s').import
     #Dir["./spec/fixtures/mp3s"]
   end
