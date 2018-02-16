@@ -46,7 +46,7 @@ class Artist
   end #method
 
   def print_songs
-    Song.name #FIX
+    songs.each { |song| puts song.name}
   end
     #binding.pry
 
