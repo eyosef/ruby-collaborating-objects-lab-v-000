@@ -15,7 +15,7 @@ class MP3Importer
     current_dir = Dir.getwd #name of current directory
     Dir.chdir(@path) #change directory to instance of path
     filenames = Dir.glob("*.mp3") #setting variable equal to mp3s in @path
-    Dir.chdir(current_dir) #
+    Dir.chdir(current_dir) #moving back to current directory
     filenames
   end
 
