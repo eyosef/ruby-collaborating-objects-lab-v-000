@@ -20,7 +20,7 @@ class Artist
   end
 
   def songs(song)
-    @sall << song
+    @all << song
   end
 
   def save
