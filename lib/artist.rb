@@ -31,8 +31,8 @@ class Artist
   end
 
   def artist(artist)
-    @@all << artist 
-  end 
+    @@all << artist
+  end
 
   def self.create(name)
     name = Artist.new(name)
