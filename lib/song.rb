@@ -10,15 +10,6 @@ class Song
     new_song = self.new(song)
     new_song.artist_name = artist
     new_song
-
-    # data = file_name.split(" - ")
-    # name = data[0]
-    # songname = data[1].gsub(".mp3", "")
-    #
-    # song = self.new(song)
-    # song.name = songname
-    # song.artist.name = name
-    # song
   end
 
   def artist_name=(name)
