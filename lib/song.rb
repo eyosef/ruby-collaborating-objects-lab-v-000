@@ -9,9 +9,6 @@ class Song
     @all = []
   end
 
-  def name
-  end
-
   def artist(artist_name)
   end
 
