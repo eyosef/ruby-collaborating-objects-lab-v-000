@@ -10,8 +10,6 @@ class Artist
     @song=song
     @artist=artist
     @songs = []
-    @@all = []
-
   end
 
   def add_song(song)
